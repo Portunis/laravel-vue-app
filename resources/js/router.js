@@ -20,7 +20,7 @@ const routes = [
         component: Post
     },
     {
-        path: '/create',
+        path: '/register',
         component: CreatePost
     }
 ];

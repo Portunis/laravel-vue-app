@@ -1,10 +1,26 @@
 <template>
     <div>
         <spin v-if="loading"/>
-        <div v-else-if="!loading && !not_found">
-            <h1>{{ post.title }} <span class="uk-badge">{{ post.created_at }}</span></h1>
-            <p class="uk-text-lead">{{ post.body }}</p>
+        <div  v-else-if="!loading && !not_found" class="uk-card uk-card-default uk-width-1-2@m">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom">{{ post.surname }}</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <p>{{ post.phone }}</p>
+                <hr>
+                <p>{{ post.country }}</p>
+                <hr>
+                <p>{{ post.city }}</p>
+            </div>
         </div>
+
+
         <div uk-alert v-if="not_found">
             <a class="uk-alert-close" uk-close></a>
             <h3>404 пост не найден</h3>

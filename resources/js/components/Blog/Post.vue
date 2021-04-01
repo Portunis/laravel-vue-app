@@ -3,16 +3,12 @@
         <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
                 <div class="uk-width-expand">
-                    <h3 class="uk-card-title uk-margin-remove-bottom">{{ title }}</h3>
-                    <p class="uk-text-meta uk-margin-remove-top">
-                        <time datetime="2016-04-01T19:00">{{ date }}</time>
-                    </p>
+                    <h3 class="uk-card-title uk-margin-remove-bottom">{{ surname }}</h3>
+
                 </div>
             </div>
         </div>
-        <div class="uk-card-body">
-            <p>{{ body }}</p>
-        </div>
+
         <div class="uk-card-footer">
             <a  class="uk-button uk-button-text" :href="`/post/${id}/`">Подробнее</a>
         </div>
@@ -23,21 +19,13 @@
     export default {
         props: {
             id: Number,
-            title: {
-                type: String,
-                default: "NULL"
-            },
-            body: {
-                type: String,
-                default: "NULL"
-            },
-            date: {
+            surname: {
                 type: String,
                 default: "NULL"
             }
         },
         methods:{
-            
+
         }
     }
 </script>

@@ -39,24 +39,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make(
-          $request->all(),
-            [
-                "title" => ["required"],
-                "body" => ["required"]
-            ]
-        );
-
-        if($validator->fails()){
-            return [
-                "status" => false,
-                "errors" => $validator->messages()
-            ];
-        }
-
         $post = Post::create([
-            "title" => $request->title,
-            "body" => $request->body
+            "name" => $request->name,
+            "surname" => $request->surname,
+            "phone" => $request->phone,
+            "password" => $request->password,
+            "country" => $request->country,
+            "city" => $request->city,
         ]);
 
         return [

@@ -5,9 +5,13 @@
             <post
                 v-for="post in posts"
                 :id="post.id"
-                :title="post.title"
-                :body="post.body"
-                :date="post.created_at"
+                :name="post.name"
+                :surname="post.surname"
+                :phone="post.phone"
+                :country="post.country"
+                :city="post.city"
+
+                :key="post.id"
             />
         </div>
 

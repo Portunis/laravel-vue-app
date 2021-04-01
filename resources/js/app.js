@@ -30,13 +30,17 @@ Vue.component('v-header', require('./components/Header.vue').default);
 import '../../public/assets/css/uikit-rtl.css';
 import '../../public/assets/css/uikit.min.css';
 import '../../public/assets/js/uikit.min.js';
-import '../../public/assets/js/uikit-icons.min.js';
+import '../../public/assets/js/icon.js';
 
 //Router
 import router from "./router";
 //
+import Vuelidate from 'vuelidate';
+Vue.use(Vuelidate);
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+
+
 });
